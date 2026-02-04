@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>财经观察与投资线索 - 地缘政治与机会</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 900px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+        
+        .header { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 2em; margin-bottom: 10px; }
+        .header .subtitle { font-size: 1.1em; opacity: 0.95; }
+        .header .warning { font-size: 0.85em; margin-top: 15px; padding: 10px; background: rgba(255,255,255,0.2); border-radius: 8px; }
+        
+        .content { padding: 30px; }
+        .section { margin-bottom: 40px; }
+        .section-title { font-size: 1.4em; color: #0f2027; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #11998e; display: flex; align-items: center; gap: 10px; }
+        
+        .alert-box { background: #fff3cd; border-left: 5px solid #ffc107; padding: 20px; margin-bottom: 25px; border-radius: 0 8px 8px 0; }
+        .alert-title { font-weight: 600; color: #856404; margin-bottom: 8px; }
+        .alert-text { color: #856404; font-size: 0.95em; }
+        
+        .market-card { background: #f8f9fa; border-radius: 12px; padding: 25px; margin-bottom: 20px; border-left: 5px solid #e74c3c; }
+        .market-title { font-size: 1.2em; font-weight: 600; color: #0f2027; margin-bottom: 10px; display: flex; align-items: center; gap: 8px; }
+        .market-desc { color: #555; margin-bottom: 15px; }
+        .impact-box { background: white; padding: 15px; border-radius: 8px; margin-top: 10px; }
+        .impact-box h4 { color: #e74c3c; margin-bottom: 10px; }
+        .impact-box ul { margin-left: 20px; }
+        .impact-box li { margin-bottom: 8px; }
+        .tag { display: inline-block; padding: 4px 12px; border-radius: 15px; font-size: 0.85em; margin-right: 8px; }
+        .tag-risk { background: #ffebee; color: #c62828; }
+        .tag-opportunity { background: #e8f5e9; color: #2e7d32; }
+        .tag-neutral { background: #e3f2fd; color: #1565c0; }
+        
+        .stock-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+        .stock-card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border-top: 4px solid #11998e; }
+        .stock-name { font-weight: 600; color: #0f2027; margin-bottom: 5px; }
+        .stock-sector { font-size: 0.85em; color: #666; margin-bottom: 10px; }
+        .stock-event { font-size: 0.9em; color: #444; }
+        .stock-impact { margin-top: 10px; font-size: 0.85em; }
+        
+        .resource-section { background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%); padding: 25px; border-radius: 12px; margin-top: 20px; }
+        .resource-title { font-size: 1.2em; color: #f57c00; margin-bottom: 15px; }
+        .resource-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+        .resource-name { font-weight: 500; }
+        .resource-trend { font-size: 0.9em; }
+        .trend-up { color: #2e7d32; }
+        .trend-down { color: #c62828; }
+        
+        .idea-section { background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%); padding: 25px; border-radius: 12px; margin-top: 20px; border: 2px dashed #4caf50; }
+        .idea-title { font-size: 1.2em; color: #2e7d32; margin-bottom: 15px; }
+        .idea-list { list-style: none; }
+        .idea-list li { background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; border-left: 4px solid #4caf50; }
+        .idea-list li strong { color: #1b5e20; }
+        
+        .disclaimer { background: #fafafa; border: 2px solid #ddd; padding: 20px; border-radius: 10px; margin-top: 30px; font-size: 0.9em; color: #666; }
+        .disclaimer strong { color: #c62828; }
+        
+        .footer { background: #f8f9fa; padding: 20px; text-align: center; color: #666; font-size: 0.9em; }
+        
+        @media (max-width: 600px) { .header h1 { font-size: 1.5em; } .content { padding: 20px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📈 财经观察与投资线索</h1>
+            <div class="subtitle">地缘政治 · 资源价格 · 股市机会 · 风险提示</div>
+            <div class="warning">⚠️ 仅供信息参考，不构成投资建议。投资有风险，决策需谨慎。</div>
+        </div>
+        
+        <div class="content">
+            
+            <!-- 地缘政治预警 -->
+            <div class="alert-box">
+                <div class="alert-title">🚨 本周地缘政治热点</div>
+                <div class="alert-text">
+                    关注地缘政治冲突对能源、粮食、半导体等关键资源的影响，可能带来投资机会或风险。
+                </div>
+            </div>
+            
+            <!-- 资源价格影响 -->
+            <div class="section">
+                <h2 class="section-title">🌍 地缘政治对资源的影响</h2>
+                
+                <div class="market-card">
+                    <div class="market-title">
+                        🛢️ 能源板块 
+                        <span class="tag tag-risk">高风险</span>
+                        <span class="tag tag-opportunity">高机会</span>
+                    </div>
+                    <div class="market-desc">
+                        地缘政治紧张局势持续影响全球能源供应。中东局势、俄乌冲突、以及主要产油国的政策变化
+                        都在重塑能源市场格局。传统能源与新能源的博弈加剧。
+                    </div>
+                    
+                    <div class="impact-box">
+                        <h4>💡 投资机会</h4>
+                        <ul>
+                            <li><strong>传统能源</strong>: 石油、天然气公司因供应紧张可能受益 (如中石油、中石化、壳牌、埃克森美孚)</li>
+                            <li><strong>新能源</strong>: 各国加速能源转型，光伏、风电、储能需求增长 (如宁德时代、隆基绿能、特斯拉)</li>
+                            <li><strong>能源运输>: 航运、管道公司可能因运输需求增加受益 (如中远海能、招商轮船)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="market-card">
+                    <div class="market-title">
+                        💎 半导体与科技 
+                        <span class="tag tag-opportunity">结构性机会</span>
+                    </div>
+                    <div class="market-desc">
+                        芯片战争持续，各国加大对半导体产业的投资。国产替代加速，AI芯片需求爆发。
+                        地缘政治导致供应链重构，带来结构性机会。
+                    </div>
+                    
+                    <div class="impact-box">
+                        <h4>💡 投资机会</h4>
+                        <ul>
+                            <li><strong>国产芯片</strong>: 受益国产替代政策 (如中芯国际、韦尔股份、兆易创新)</li>
+                            <li><strong>AI算力</strong>: 数据中心、GPU、服务器需求爆发 (如英伟达、AMD、寒武纪)</li>
+                            <li><strong>稀土资源</strong>: 关键战略资源，供应可能收紧 (如北方稀土、盛和资源)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="market-card">
+                    <div class="market-title">
+                        🌾 粮食与农业 
+                        <span class="tag tag-risk">通胀风险</span>
+                    </div>
+                    <div class="market-desc">
+                        极端天气、地缘冲突影响全球粮食供应。粮食安全问题日益突出，
+                        各国加强粮食储备，农业产业链可能受益。
+                    </div>
+                    
+                    <div class="impact-box">
+                        <h4>💡 投资机会</h4>
+                        <ul>
+                            <li><strong>农业龙头</strong>: 种植、种业公司可能受益 (如隆平高科、大北农、北大荒)</li>
+                            <li><strong>化肥农药</strong>: 农产品价格上涨带动化肥需求 (如云天化、盐湖股份)</li>
+                            <li><strong>粮食贸易</strong>: 粮食进出口商可能受益 (如中粮科工)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 今日资源价格 -->
+            <div class="section">
+                <h2 class="section-title">📊 关键资源价格趋势</h2>
+                
+                <div class="resource-section">
+                    <div class="resource-title">🔥 重点关注资源</div>
+                    
+                    <div class="resource-item">
+                        <span class="resource-name">🛢️ 布伦特原油</span>
+                        <span class="resource-trend trend-up">↑ 供应紧张</span>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <span class="resource-name">⚡ 天然气 (欧洲)</span>
+                        <span class="resource-trend trend-up">↑ 冬季需求+供应不确定</span>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <span class="resource-name">💎 稀土 (钕、镨)</span>
+                        <span class="resource-trend trend-up">↑ 新能源+军工需求</span>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <span class="resource-name">🌾 小麦/玉米</span>
+                        <span class="resource-trend trend-up">↑ 极端天气+地缘冲突</span>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <span class="resource-name">🔋 锂/钴/镍</span>
+                        <span class="resource-trend trend-down">↓ 供应增加但长期看好</span>
+                    </div>
+                    
+                    <div class="resource-item">
+                        <span class="resource-name">💻 芯片/半导体</span>
+                        <span class="resource-trend trend-up">↑ AI需求爆发+国产替代</span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 上市公司事件 -->
+            <div class="section">
+                <h2 class="section-title">📈 上市公司重大事件</h2>
+                
+                <div class="stock-grid">
+                    <div class="stock-card">
+                        <div class="stock-name">⚡ 新能源赛道</div>
+                        <div class="stock-sector">光伏/风电/储能</div>
+                        <div class="stock-event">各国加速能源转型政策出台，补贴力度加大</div>
+                        <div class="stock-impact"><span class="tag tag-opportunity">利好</span> 中长期受益</div>
+                    </div>
+                    
+                    <div class="stock-card">
+                        <div class="stock-name">🤖 AI与算力</div>
+                        <div class="stock-sector">芯片/服务器/云服务</div>
+                        <div class="stock-event">AI应用爆发，算力需求持续增长</div>
+                        <div class="stock-impact"><span class="tag tag-opportunity">利好</span> 高景气度</div>
+                    </div>
+                    
+                    <div class="stock-card">
+                        <div class="stock-name">🛢️ 传统能源</div>
+                        <div class="stock-sector">石油/天然气/煤炭</div>
+                        <div class="stock-event">地缘冲突导致供应紧张，价格维持高位</div>
+                        <div class="stock-impact"><span class="tag tag-opportunity">利好</span> 短期受益</div>
+                    </div>
+                    
+                    <div class="stock-card">
+                        <div class="stock-name">💊 医药生物</div>
+                        <div class="stock-sector">创新药/医疗器械</div>
+                        <div class="stock-event">医保谈判结果出炉，部分企业承压</div>
+                        <div class="stock-impact"><span class="tag tag-risk">分化</span> 精选个股</div>
+                    </div>
+                    
+                    <div class="stock-card">
+                        <div class="stock-name">🏠 房地产</div>
+                        <div class="stock-sector">地产开发/建材</div>
+                        <div class="stock-event">政策持续松绑，但复苏仍需时间</div>
+                        <div class="stock-impact"><span class="tag tag-neutral">观望</span> 不确定性高</div>
+                    </div>
+                    
+                    <div class="stock-card">
+                        <div class="stock-name">🌐 跨境电商</div>
+                        <div class="stock-sector">出海企业/物流</div>
+                        <div class="stock-event">全球贸易环境复杂，但中国企业竞争力提升</div>
+                        <div class="stock-impact"><span class="tag tag-opportunity">结构性机会</span></div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 投资线索 -->
+            <div class="section">
+                <h2 class="section-title">💰 本周投资线索 (仅供参考)</h2>
+                
+                <div class="idea-section">
+                    <div class="idea-title">🎯 思路1: 地缘冲突受益链</div>
+                    
+                    <ul class="idea-list">
+                        <li>
+                            <strong>能源安全</strong>: 关注石油、天然气、煤炭等传统能源的阶段性机会，
+                            以及新能源的长期替代逻辑。
+                        </li>
+                        <li>
+                            <strong>国防军工</strong>: 地缘紧张局势下，军工订单可能增加，
+                            关注航空航天、船舶制造等。
+                        </li>
+                        <li>
+                            <strong>战略资源</strong>: 稀土、锂、铜等关键资源，供应受限但需求刚性，
+                            价格有支撑。
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="idea-section">
+                    <div class="idea-title">🎯 思路2: 技术革命受益链</div>
+                    
+                    
+                    <ul class="idea-list">
+                        <li>
+                            <strong>AI基础设施</strong>: 算力、存储、数据中心等"卖铲子"的公司，
+                            无论AI应用谁赢，基础设施都受益。
+                        </li>
+                        <li>
+                            <strong>国产替代</strong>: 半导体、软件、高端制造等领域的国产龙头，
+                            政策扶持+市场广阔。
+                        </li>
+                        <li>
+                            <strong>新能源革命</strong>: 不仅是电动车，还包括储能、氢能、智能电网等，
+                            能源转型的长期赛道。
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="idea-section">
+                    <div class="idea-title">🎯 思路3: 抗通胀资产</div>
+                    
+                    
+                    <ul class="idea-list">
+                        <li>
+                            <strong>黄金/贵金属</strong>: 地缘风险+通胀预期，黄金的避险属性。
+                        </li>
+                        <li>
+                            <strong>高股息资产</strong>: 在不确定环境中，现金流稳定的蓝筹股提供安全边际。
+                        </li>
+                        <li>
+                            <strong>必需消费品</strong>: 无论经济好坏，人们都需要吃喝，
+                            白酒、食品等龙头有定价权。
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 免责声明 -->
+            <div class="disclaimer">
+                <strong>⚠️ 重要声明</strong><br><br>
+                1. <strong>本内容仅供信息参考，不构成任何投资建议。</strong><br>
+                2. 股市有风险，投资需谨慎。过往表现不代表未来收益。<br>
+                3. 请根据自身风险承受能力做出独立判断，必要时咨询专业投资顾问。<br>
+                4. 地缘政治和市场环境变化迅速，信息可能滞后，请以实时行情为准。<br>
+                5. <strong>切勿借钱投资或使用杠杆，只用闲置资金进行投资。</strong>
+            </div>
+            
+        </div>
+        
+        <div class="footer">
+            <p>🪐 Generated by 小宇宙 | 财经观察周报</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">📰 把握市场脉搏 · 💡 发现投资机会 · ⚠️ 注意风险控制</p>
+        </div>
+        
+    </div>
+</body>
+</html>
