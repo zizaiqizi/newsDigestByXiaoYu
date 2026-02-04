@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌅 每日简报 - {{DATE}}</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+        
+        /* Header */
+        .header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 2.2em; margin-bottom: 10px; font-weight: 700; }
+        .header .subtitle { font-size: 1.1em; opacity: 0.9; }
+        .header .date { font-size: 0.95em; opacity: 0.8; margin-top: 10px; }
+        
+        /* Content */
+        .content { padding: 30px; }
+        
+        /* Section通用样式 */
+        .section { margin-bottom: 40px; }
+        .section-title { font-size: 1.5em; color: #1e3c72; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; display: flex; align-items: center; gap: 10px; }
+        .section-icon { font-size: 1.2em; }
+        
+        /* Part 1: News Digest */
+        .news-item { background: #f8f9fa; border-left: 4px solid #667eea; padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+        .news-headline { font-size: 1.15em; font-weight: 600; color: #1e3c72; margin-bottom: 10px; line-height: 1.4; }
+        .news-summary { color: #555; margin-bottom: 12px; line-height: 1.6; }
+        .news-source { font-size: 0.9em; }
+        .news-source a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .news-source a:hover { text-decoration: underline; }
+        
+        /* Part 2: Vocabulary Quiz */
+        .quiz-section { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 25px; border-radius: 12px; }
+        .quiz-item { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #e74c3c; }
+        .quiz-question { font-weight: 600; margin-bottom: 8px; }
+        .quiz-answer { color: #27ae60; font-weight: 500; display: none; }
+        .quiz-item:hover .quiz-answer { display: block; }
+        
+        /* Part 3: Work Summary */
+        .work-section { background: linear-gradient(135deg, #fff9e6 0%, #ffe4b5 100%); padding: 25px; border-radius: 12px; }
+        .work-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin-bottom: 20px; }
+        .stat-card { background: white; padding: 15px; border-radius: 10px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .stat-number { font-size: 2em; font-weight: bold; color: #e74c3c; }
+        .stat-label { font-size: 0.9em; color: #666; margin-top: 5px; }
+        .sprint-list { margin-top: 20px; }
+        .sprint-item { background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; border-left: 4px solid #f39c12; }
+        .sprint-title { font-weight: 600; color: #1e3c72; margin-bottom: 5px; }
+        .sprint-desc { font-size: 0.95em; color: #555; }
+        .work-link { text-align: center; margin-top: 20px; }
+        .work-link a { color: #667eea; text-decoration: none; font-weight: 500; }
+        
+        /* Footer */
+        .footer { background: #f8f9fa; padding: 20px 30px; text-align: center; color: #666; font-size: 0.9em; border-top: 1px solid #e9ecef; }
+        
+        /* Responsive */
+        @media (max-width: 600px) { 
+            .header h1 { font-size: 1.6em; } 
+            .content { padding: 20px; }
+            .work-stats { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🌅 每日简报</h1>
+            <div class="subtitle">Morning Digest by 小宇宙 🪐</div>
+            <div class="date">{{DATE}} | {{WEEKDAY}}</div>
+        </div>
+        
+        <div class="content">
+            
+            <!-- ==================== PART 1: NEWS DIGEST ==================== -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">📰</span>News Digest 新闻摘要</h2>
+                
+                <div class="news-item">
+                    <div class="news-headline">{{NEWS_TITLE_1}}</div>
+                    <div class="news-summary">{{NEWS_SUMMARY_1}}</div>
+                    <div class="news-source">Source: {{NEWS_SOURCE_1}}</div>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-headline">{{NEWS_TITLE_2}}</div>
+                    <div class="news-summary">{{NEWS_SUMMARY_2}}</div>
+                    <div class="news-source">Source: {{NEWS_SOURCE_2}}</div>
+                </div>
+                
+                <div class="news-item">
+                    <div class="news-headline">{{NEWS_TITLE_3}}</div>
+                    <div class="news-summary">{{NEWS_SUMMARY_3}}</div>
+                    <div class="news-source">Source: {{NEWS_SOURCE_3}}</div>
+                </div>
+            </div>
+            
+            <!-- ==================== PART 2: VOCABULARY QUIZ ==================== -->
+            <div class="section">
+                <div class="quiz-section">
+                    <h2 class="section-title" style="border-bottom-color: #e74c3c;"><span class="section-icon">📝</span>Vocabulary Quiz 单词测验</h2>
+                    <p style="text-align: center; color: #666; margin-bottom: 20px; font-size: 0.9em;">💡 鼠标悬停查看答案</p>
+                    
+                    <div class="quiz-item">
+                        <div class="quiz-question">1. {{QUIZ_QUESTION_1}}</div>
+                        <div class="quiz-answer">✓ {{QUIZ_ANSWER_1}}</div>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <div class="quiz-question">2. {{QUIZ_QUESTION_2}}</div>
+                        <div class="quiz-answer">✓ {{QUIZ_ANSWER_2}}</div>
+                    </div>
+                    
+                    <div class="quiz-item">
+                        <div class="quiz-question">3. {{QUIZ_QUESTION_3}}</div>
+                        <div class="quiz-answer">✓ {{QUIZ_ANSWER_3}}</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- ==================== PART 3: WORK SUMMARY ==================== -->
+            <div class="section">
+                <div class="work-section">
+                    <h2 class="section-title" style="border-bottom-color: #f39c12;"><span class="section-icon">💼</span>Work Summary 昨日工作总结</h2>
+                    
+                    <!-- 统计卡片 -->
+                    <div class="work-stats">
+                        <div class="stat-card">
+                            <div class="stat-number">{{WORK_TASKS}}</div>
+                            <div class="stat-label">完成任务</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">{{WORK_COMMITS}}</div>
+                            <div class="stat-label">Git提交</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">{{WORK_SPRINTS}}</div>
+                            <div class="stat-label">Sprint数</div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sprint列表 -->
+                    <div class="sprint-list">
+                        <div class="sprint-item">
+                            <div class="sprint-title">🕐 {{SPRINT_1_TIME}}</div>
+                            <div class="sprint-desc">{{SPRINT_1_SUMMARY}}</div>
+                        </div>
+                        
+                        <div class="sprint-item">
+                            <div class="sprint-title">🕐 {{SPRINT_2_TIME}}</div>
+                            <div class="sprint-desc">{{SPRINT_2_SUMMARY}}</div>
+                        </div>
+                        
+                        <div class="sprint-item">
+                            <div class="sprint-title">🕐 {{SPRINT_3_TIME}}</div>
+                            <div class="sprint-desc">{{SPRINT_3_SUMMARY}}</div>
+                        </div>
+                    </div>
+                    
+                    <!-- 查看详情链接 -->
+                    <div class="work-link">
+                        <a href="{{WORK_REPORT_URL}}" target="_blank">📄 查看完整Sprint回顾报告 →</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <p>🪐 Generated by 小宇宙 | <a href="https://github.com/zizaiqizi/newsDigestByXiaoYu">View on GitHub</a></p>
+            <p style="margin-top: 10px; font-size: 0.85em;">📰 了解世界 · 📝 学习新词 · 💼 回顾工作</p>
+        </div>
+        
+    </div>
+</body>
+</html>

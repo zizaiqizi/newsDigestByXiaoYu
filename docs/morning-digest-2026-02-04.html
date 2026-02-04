@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning News Digest - February 4, 2026</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.6; color: #333; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); min-height: 100vh; padding: 20px; }
+        .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+        .header { background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white; padding: 40px 30px; text-align: center; }
+        .header h1 { font-size: 2.2em; margin-bottom: 10px; font-weight: 700; }
+        .header .date { font-size: 1.1em; opacity: 0.9; }
+        .content { padding: 30px; }
+        .section { margin-bottom: 40px; }
+        .section-title { font-size: 1.5em; color: #1e3c72; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 3px solid #667eea; display: flex; align-items: center; gap: 10px; }
+        .section-icon { font-size: 1.2em; }
+        .news-item { background: #f8f9fa; border-left: 4px solid #667eea; padding: 20px; margin-bottom: 20px; border-radius: 0 8px 8px 0; }
+        .news-headline { font-size: 1.15em; font-weight: 600; color: #1e3c72; margin-bottom: 10px; line-height: 1.4; }
+        .news-summary { color: #555; margin-bottom: 12px; line-height: 1.6; }
+        .news-source { font-size: 0.9em; }
+        .news-source a { color: #667eea; text-decoration: none; font-weight: 500; }
+        .news-source a:hover { text-decoration: underline; }
+        .quiz-section { background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 25px; border-radius: 12px; margin-top: 30px; }
+        .quiz-title { font-size: 1.4em; color: #1e3c72; margin-bottom: 20px; text-align: center; }
+        .quiz-item { background: white; padding: 15px; margin-bottom: 15px; border-radius: 8px; border-left: 4px solid #e74c3c; }
+        .quiz-question { font-weight: 600; margin-bottom: 8px; }
+        .quiz-answer { color: #27ae60; font-weight: 500; display: none; }
+        .quiz-item:hover .quiz-answer { display: block; }
+        .footer { background: #f8f9fa; padding: 20px 30px; text-align: center; color: #666; font-size: 0.9em; border-top: 1px solid #e9ecef; }
+        @media (max-width: 600px) { .header h1 { font-size: 1.6em; } .content { padding: 20px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📰 Morning News Digest</h1>
+            <div class="date">Tuesday, February 4, 2026 | Prepared for Rangel</div>
+        </div>
+        
+        <div class="content">
+            <!-- TEST MESSAGE -->
+            <div class="news-item" style="background: #fff3cd; border-left-color: #ffc107;">
+                <div class="news-headline">🧪 全流程测试</div>
+                <div class="news-summary">这是一份测试简报，用于验证 GitHub 推送和邮件通知流程是否正常工作。由于 Brave Search API 未配置，无法获取实时新闻。</div>
+            </div>
+
+            <!-- ECONOMIC NEWS SECTION -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">💹</span>Economic News</h2>
+                
+                <div class="news-item">
+                    <div class="news-headline">Global Markets React to New Trade Policies</div>
+                    <div class="news-summary">Markets across Asia and Europe showed mixed reactions as new trade agreements take effect. Analysts remain cautiously optimistic about Q1 growth prospects.</div>
+                    <div class="news-source">Source: Financial Times</div>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-headline">Tech Sector Continues AI Investment Surge</div>
+                    <div class="news-summary">Major technology companies announced billions in new AI infrastructure investments, driving semiconductor stocks higher.</div>
+                    <div class="news-source">Source: Bloomberg</div>
+                </div>
+            </div>
+
+            <!-- GEOPOLITICAL NEWS SECTION -->
+            <div class="section">
+                <h2 class="section-title"><span class="section-icon">🌍</span>Geopolitical News</h2>
+                
+                <div class="news-item">
+                    <div class="news-headline">Diplomatic Talks Resume in Key Regions</div>
+                    <div class="news-summary">International diplomats convened for renewed peace negotiations, with observers noting cautious progress in several long-standing disputes.</div>
+                    <div class="news-source">Source: Reuters</div>
+                </div>
+            </div>
+
+            <!-- VOCABULARY QUIZ SECTION -->
+            <div class="quiz-section">
+                <h2 class="quiz-title">📝 Daily Vocabulary Quiz</h2>
+                <p style="text-align: center; color: #666; margin-bottom: 20px;">Hover to reveal answers</p>
+                
+                <div class="quiz-item">
+                    <div class="quiz-question">1. What is the correct spelling: "recieve" or "receive"?</div>
+                    <div class="quiz-answer">✓ receive (i before e except after c)</div>
+                </div>
+                
+                <div class="quiz-item">
+                    <div class="quiz-question">2. What does "cautiously optimistic" mean?</div>
+                    <div class="quiz-answer">✓ Hopeful but careful; positive but with reservations</div>
+                </div>
+                
+                <div class="quiz-item">
+                    <div class="quiz-question">3. What is the noun form of "negotiate"?</div>
+                    <div class="quiz-answer">✓ negotiation</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>Generated by 小宇宙 🪐 | <a href="https://github.com/zizaiqizi/newsDigestByXiaoYu">View on GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>
