@@ -2,7 +2,7 @@
 
 Morning Digest - 一站式的晨间信息获取
 
-## 📋 简报结构 (三大部分)
+## 📋 简报结构 (四大部分)
 
 ### Part 1: 📰 News Digest (新闻摘要)
 - 经济新闻
@@ -14,7 +14,13 @@ Morning Digest - 一站式的晨间信息获取
 - 悬停显示答案
 - 每日3题
 
-### Part 3: 💼 Work Summary (工作总结) ⭐
+### Part 3: 🚀 AI Industry Watch (AI行业观察) ⭐
+- 最新AI趋势
+- 热门工具推荐
+- 创业灵感启发
+- 成功案例解析
+
+### Part 4: 💼 Work Summary (工作总结)
 - 昨日完成的任务数
 - Git提交次数
 - Sprint回顾摘要
